@@ -712,7 +712,7 @@
 </div>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-const BASE = "https://github.com/hbennett-lgtm/331land/blob/main/";
+const BASE = "https://cdn.jsdelivr.net/gh/hbennett-lgtm/331land@main/";
 const photos = [
   "DSC_8199.jpg","DSC_8204.jpg","DSC_8209.jpg","DSC_8214.jpg","DSC_8219.jpg",
   "DSC_8224.jpg","DSC_8229.jpg","DSC_8234.jpg","DSC_8239.jpg","DSC_8244.jpg",
@@ -764,7 +764,7 @@ let lightboxIndex = 0;
 photos.forEach((photo, i) => {
   const item = document.createElement('div');
   item.className = 'gallery-item';
-  item.innerHTML = `<img src="${BASE}${photo}?raw=true" alt="331 Land Street - Photo ${i+1}" loading="lazy" crossorigin="anonymous"><div class="overlay"></div>`;
+  item.innerHTML = `<img src="${BASE}${photo}" alt="331 Land Street - Photo ${i+1}" loading="lazy" crossorigin="anonymous"><div class="overlay"></div>`;
   item.onclick = () => openLightbox(i);
   galleryGrid.appendChild(item);
 });
