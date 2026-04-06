@@ -100,7 +100,7 @@ section{padding:7rem 0}
 .lightbox{display:none;position:fixed;inset:0;z-index:1000;background:rgba(5,20,22,0.97);align-items:center;justify-content:center}
 .lightbox.open{display:flex}
 .lightbox img{max-width:90vw;max-height:90vh;object-fit:contain}
-.lightbox-close{position:absolute;top:2rem;right:2.5rem;color:white;font-size:2rem;cursor:pointer;background:none;border:none;opacity:0.7;font-family:'Jost',sans-serif;font-weight:200;transition:opacity 0.2s}
+.lightbox-close{position:absolute;top:2rem;right:2.5rem;color:white;font-size:2rem;cursor:pointer;background:none;border:none;opacity:0.7;font-weight:200;transition:opacity 0.2s}
 .lightbox-prev,.lightbox-next{position:absolute;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(255,255,255,0.2);color:white;font-size:1.5rem;padding:1rem 1.4rem;cursor:pointer;transition:all 0.2s}
 .lightbox-prev{left:2rem}
 .lightbox-next{right:2rem}
@@ -304,16 +304,33 @@ footer span{color:var(--gold)}
 <script>
 var IMG = "images/";
 var photos = [
-  "DSC_8199.jpg","DSC_8204.jpg","DSC_8209.jpg","DSC_8214.jpg","DSC_8219.jpg",
-  "DSC_8224.jpg","DSC_8229.jpg","DSC_8234.jpg","DSC_8239.jpg","DSC_8244.jpg",
-  "DSC_8249.jpg","DSC_8254.jpg","DSC_8259.jpg","DSC_8264.jpg","DSC_8269.jpg",
-  "DSC_8274.jpg","DSC_8279.jpg","DSC_8284.jpg","DSC_8289.jpg","DSC_8294.jpg",
-  "DSC_8299.jpg","DSC_8309.jpg","DSC_8314.jpg","DSC_8319.jpg","DSC_8324.jpg",
-  "DSC_8329.jpg","DSC_8334.jpg","DSC_8339.jpg","DSC_8344.jpg","DSC_8349.jpg",
-  "DSC_8355.jpg","DSC_8359.jpg","DSC_8364.jpg","DSC_8370.jpg","DSC_8374.jpg",
-  "DSC_8379.jpg","DSC_8384.jpg","DSC_8389.jpg","DSC_8394.jpg","DSC_8400.jpg",
-  "DSC_8404.jpg","DSC_8404_2.jpg","DSC_8409.jpg","DSC_8414.jpg","DSC_8419.jpg",
-  "DSC_8424.jpg","DSC_8429.jpg"
+  "DJI_20260404183059_0131_D.jpg",
+  "DJI_20260404183218_0135_D.jpg",
+  "DJI_20260404183323_0140_D.jpg",
+  "DJI_20260404183458_0145_D.jpg",
+  "DJI_20260404183532_0151_D.jpg",
+  "DJI_20260404183628_0155_D.jpg",
+  "DJI_20260404183709_0161_D.jpg",
+  "DJI_20260404183754_0166_D.jpg",
+  "DJI_20260404183851_0170_D.jpg",
+  "DJI_20260404184047_0175_D.jpg",
+  "DJI_20260404184201_0180_D.jpg",
+  "DJI_20260404184246_0185_D.jpg",
+  "DJI_20260404184412_0191_D.jpg",
+  "DJI_20260404184526_0196_D.jpg",
+  "DSC_8214.jpg","DSC_8244.jpg","DSC_8249.jpg","DSC_8254.jpg","DSC_8259.jpg",
+  "DSC_8279.jpg","DSC_8284.jpg","DSC_8309.jpg","DSC_8314.jpg","DSC_8319.jpg",
+  "DSC_8324.jpg","DSC_8329.jpg","DSC_8334.jpg","DSC_8339.jpg","DSC_8344.jpg",
+  "DSC_8349.jpg","DSC_8355.jpg","DSC_8359.jpg","DSC_8364.jpg","DSC_8370.jpg",
+  "DSC_8374.jpg","DSC_8379.jpg","DSC_8384.jpg","DSC_8389.jpg","DSC_8394.jpg",
+  "DSC_8400.jpg","DSC_8404.jpg","DSC_8404_2.jpg","DSC_8409.jpg","DSC_8414.jpg",
+  "DSC_8419.jpg","DSC_8424.jpg","DSC_8429.jpg","DSC_8439.jpg","DSC_8444.jpg",
+  "DSC_8449.jpg","DSC_8459.jpg","DSC_8464.jpg","DSC_8469.jpg","DSC_8474.jpg",
+  "DSC_8484.jpg","DSC_8492.jpg","DSC_8494.jpg","DSC_8499.jpg","DSC_8504.jpg",
+  "DSC_8509.jpg","DSC_8515.jpg","DSC_8519.jpg","DSC_8529.jpg","DSC_8544.jpg",
+  "DSC_8555.jpg","DSC_8559.jpg","DSC_8564.jpg","DSC_8569.jpg","DSC_8574.jpg",
+  "DSC_8579.jpg","DSC_8589.jpg","DSC_8594.jpg","DSC_8599.jpg","DSC_8604.jpg",
+  "DSC_8609.jpg","DSC_8616.jpg","DSC_8620.jpg"
 ];
 
 var heroGallery = document.getElementById("heroGallery");
@@ -345,7 +362,7 @@ function goToSlide(n) {
 
 setInterval(function() { goToSlide((currentSlide + 1) % heroCount); }, 5000);
 
-document.getElementById("dockImage").style.backgroundImage = "url(" + IMG + photos[20] + ")";
+document.getElementById("dockImage").style.backgroundImage = "url(" + IMG + photos[14] + ")";
 
 var galleryGrid = document.getElementById("galleryGrid");
 var lightboxIndex = 0;
