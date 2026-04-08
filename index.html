@@ -113,7 +113,7 @@ footer span{color:var(--gold)}
 </style>
 </head>
 <body>
-
+ 
 <nav>
   <a href="#" class="logo">331 Land Street</a>
   <ul>
@@ -124,7 +124,7 @@ footer span{color:var(--gold)}
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
-
+ 
 <section class="hero" id="top">
   <div class="hero-gallery" id="heroGallery"></div>
   <div class="hero-overlay"></div>
@@ -143,14 +143,14 @@ footer span{color:var(--gold)}
   </div>
   <div class="hero-dots" id="heroDots"></div>
 </section>
-
+ 
 <div class="stats-band">
   <div class="stat"><div class="stat-value">1,500</div><div class="stat-label">Square Feet</div></div>
   <div class="stat"><div class="stat-value">3 / 3</div><div class="stat-label">Beds / Baths (All Ensuite)</div></div>
   <div class="stat"><div class="stat-value">12k lb.</div><div class="stat-label">Brand New Boat Lift</div></div>
   <div class="stat"><div class="stat-value">2 Yrs</div><div class="stat-label">Old — Like New</div></div>
 </div>
-
+ 
 <section id="about">
   <div class="container">
     <div class="description-grid">
@@ -169,7 +169,7 @@ footer span{color:var(--gold)}
     </div>
   </div>
 </section>
-
+ 
 <section class="features-section">
   <div class="container">
     <div class="section-label fade-up">Features and Finishes</div>
@@ -219,7 +219,7 @@ footer span{color:var(--gold)}
     </div>
   </div>
 </section>
-
+ 
 <section class="gallery-section" id="gallery">
   <div class="container">
     <div class="section-label">Photography</div>
@@ -232,7 +232,7 @@ footer span{color:var(--gold)}
     <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:1rem">Schedule a Private Showing</a>
   </div>
 </section>
-
+ 
 <div class="dock-section" id="dock">
   <div class="dock-image" id="dockImage"></div>
   <div class="dock-content">
@@ -249,7 +249,7 @@ footer span{color:var(--gold)}
     </div>
   </div>
 </div>
-
+ 
 <section class="docs-section" id="documents">
   <div class="container">
     <div class="section-label fade-up">Transparency</div>
@@ -259,13 +259,13 @@ footer span{color:var(--gold)}
       <div class="doc-icon">&#128273;</div>
       <div class="doc-info">
         <h4>Additional Documents</h4>
-        <p>Flood (Wright Flood and Transferrable), hazard and wind insurance, warranty deed, plat map, dock permits, and more</p>
+        <p>Flood, hazard and wind insurance, warranty deed, plat map, and more</p>
         <div class="doc-coming">Available Upon Request</div>
       </div>
     </div>
   </div>
 </section>
-
+ 
 <section class="contact-section" id="contact">
   <div class="section-label">Get in Touch</div>
   <h2 class="section-title">Schedule a <em>Private Showing</em></h2>
@@ -287,12 +287,12 @@ footer span{color:var(--gold)}
     </a>
   </div>
 </section>
-
+ 
 <footer>
   <p>331 Land Street &nbsp;&middot;&nbsp; Island Waterfront Estate &nbsp;&middot;&nbsp; <span>$1,600,000</span> &nbsp;&middot;&nbsp; For Sale By Owner</p>
   <p style="margin-top:0.5rem">Just 2 years old — everything is like new.</p>
 </footer>
-
+ 
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" onclick="closeLightbox()">X</button>
   <button class="lightbox-prev" onclick="lightboxNav(-1)">&#8249;</button>
@@ -300,7 +300,7 @@ footer span{color:var(--gold)}
   <button class="lightbox-next" onclick="lightboxNav(1)">&#8250;</button>
   <div class="lightbox-counter" id="lightboxCounter"></div>
 </div>
-
+ 
 <script>
 var IMG = "images/";
 var photos = [
@@ -331,14 +331,16 @@ var photos = [
   "DSC_8555.jpg","DSC_8559.jpg","DSC_8564.jpg","DSC_8569.jpg","DSC_8574.jpg",
   "DSC_8579.jpg","DSC_8589.jpg","DSC_8594.jpg","DSC_8599.jpg","DSC_8604.jpg",
   "DSC_8609.jpg","DSC_8616.jpg","DSC_8620.jpg",
-  "floorplan.png"
+  "floorplan.png",
+  "rentalprojection1.jpeg",
+  "rentalprojection2.jpeg"
 ];
-
+ 
 var heroGallery = document.getElementById("heroGallery");
 var heroDots = document.getElementById("heroDots");
 var currentSlide = 0;
 var heroCount = 8;
-
+ 
 for (var i = 0; i < heroCount; i++) {
   var slide = document.createElement("div");
   slide.className = "hero-slide" + (i === 0 ? " active" : "");
@@ -350,7 +352,7 @@ for (var i = 0; i < heroCount; i++) {
   dot.onclick = function() { goToSlide(parseInt(this.getAttribute("data-index"))); };
   heroDots.appendChild(dot);
 }
-
+ 
 function goToSlide(n) {
   var slides = document.querySelectorAll(".hero-slide");
   var dots = document.querySelectorAll(".dot");
@@ -360,14 +362,14 @@ function goToSlide(n) {
   slides[currentSlide].classList.add("active");
   dots[currentSlide].classList.add("active");
 }
-
+ 
 setInterval(function() { goToSlide((currentSlide + 1) % heroCount); }, 5000);
-
+ 
 document.getElementById("dockImage").style.backgroundImage = "url(" + IMG + photos[14] + ")";
-
+ 
 var galleryGrid = document.getElementById("galleryGrid");
 var lightboxIndex = 0;
-
+ 
 for (var j = 0; j < photos.length; j++) {
   (function(idx) {
     var item = document.createElement("div");
@@ -381,7 +383,7 @@ for (var j = 0; j < photos.length; j++) {
     galleryGrid.appendChild(item);
   })(j);
 }
-
+ 
 function openLightbox(i) {
   lightboxIndex = i;
   document.getElementById("lightboxImg").src = IMG + photos[i];
@@ -406,7 +408,7 @@ document.addEventListener("keydown", function(e) {
   if (e.key === "ArrowRight") lightboxNav(1);
   if (e.key === "ArrowLeft") lightboxNav(-1);
 });
-
+ 
 var observer = new IntersectionObserver(function(entries) {
   entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add("visible"); });
 }, { threshold: 0.1 });
@@ -414,3 +416,4 @@ document.querySelectorAll(".fade-up").forEach(function(el) { observer.observe(el
 </script>
 </body>
 </html>
+ 
